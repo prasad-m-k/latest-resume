@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prasad MK — Résumé</title>
+<meta name="description" content="Solution Architect · Technical Lead · SRE — Cloud Infrastructure & AI-Driven Operations">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --surface: #ffffff;
+    --ink: #1b1f27;
+    --ink-soft: #4b5563;
+    --ink-faint: #6b7280;
+    --rule: #e2e5ea;
+    --rule-strong: #cdd2da;
+    --accent: #2f6a67;
+    --accent-soft: #e7eeed;
+    --link: #2f6a67;
+    --shadow: 0 1px 2px rgba(20, 24, 32, 0.04), 0 8px 24px rgba(20, 24, 32, 0.05);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14161a;
+      --surface: #1b1e24;
+      --ink: #edeff2;
+      --ink-soft: #aeb4bf;
+      --ink-faint: #868d99;
+      --rule: #2b303a;
+      --rule-strong: #3a404c;
+      --accent: #74b8b1;
+      --accent-soft: #202b2a;
+      --link: #82c4bd;
+      --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #14161a;
+    --surface: #1b1e24;
+    --ink: #edeff2;
+    --ink-soft: #aeb4bf;
+    --ink-faint: #868d99;
+    --rule: #2b303a;
+    --rule-strong: #3a404c;
+    --accent: #74b8b1;
+    --accent-soft: #202b2a;
+    --link: #82c4bd;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  .page {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 3.5rem 1.75rem 5rem;
+  }
+
+  .sheet {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+    padding: 3rem clamp(1.5rem, 5vw, 4rem);
+  }
+
+  /* ---- Header ---- */
+
+  header.masthead {
+    margin-bottom: 2.75rem;
+  }
+
+  .masthead-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .download-btn {
+    flex-shrink: 0;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.02em;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border: 1px solid var(--rule-strong);
+    border-radius: 4px;
+    padding: 0.55rem 0.95rem;
+    text-decoration: none;
+    white-space: nowrap;
+    margin-top: 0.3rem;
+    transition: background 0.15s ease, border-color 0.15s ease;
+  }
+  .download-btn:hover { border-color: var(--accent); }
+
+  h1.name {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 2.6rem);
+    letter-spacing: -0.01em;
+    margin: 0 0 0.35rem;
+    text-wrap: balance;
+  }
+
+  p.role-line {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--ink-soft);
+    margin: 0 0 1.1rem;
+  }
+
+  ul.contact-line {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 0.85rem;
+    padding: 0;
+    margin: 0 0 1.6rem;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+  }
+
+  ul.contact-line li { display: flex; align-items: center; gap: 0.85rem; }
+  ul.contact-line li:not(:last-child)::after {
+    content: "·";
+    color: var(--rule-strong);
+    margin-left: 0.85rem;
+  }
+  ul.contact-line a { color: var(--ink-soft); }
+  ul.contact-line a:hover { color: var(--link); }
+
+  header.masthead hr {
+    border: none;
+    border-top: 1px solid var(--rule-strong);
+    margin: 0;
+  }
+
+  /* ---- Section scaffolding ---- */
+
+  section { margin-top: 2.5rem; }
+  section:first-of-type { margin-top: 0; }
+
+  h2.section-title {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 1.1rem;
+    padding-bottom: 0.55rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  p.summary {
+    color: var(--ink-soft);
+    font-size: 1.01rem;
+    max-width: 66ch;
+  }
+
+  /* ---- Skills grid ---- */
+
+  dl.skills {
+    display: grid;
+    grid-template-columns: minmax(9rem, 13rem) 1fr;
+    row-gap: 0.65rem;
+    column-gap: 1.25rem;
+    margin: 0;
+  }
+
+  dl.skills dt {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.78rem;
+    color: var(--ink-faint);
+    padding-top: 0.15rem;
+  }
+
+  dl.skills dd {
+    margin: 0;
+    color: var(--ink);
+  }
+
+  /* ---- Experience ---- */
+
+  article.role {
+    padding: 1.15rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  article.role:last-child { border-bottom: none; padding-bottom: 0; }
+  article.role:first-child { padding-top: 0; }
+
+  .role-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.15rem;
+  }
+
+  .role-head h3 {
+    margin: 0;
+    font-size: 1.06rem;
+    font-weight: 600;
+  }
+  .role-head h3 .client {
+    font-weight: 400;
+    color: var(--ink-soft);
+  }
+
+  .role-head time {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.78rem;
+    color: var(--ink-faint);
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+
+  p.role-meta {
+    margin: 0 0 0.75rem;
+    font-style: italic;
+    font-family: "Source Serif 4", Georgia, serif;
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+  }
+
+  ul.role-bullets {
+    margin: 0;
+    padding-left: 1.15rem;
+    color: var(--ink-soft);
+  }
+  ul.role-bullets li { margin-bottom: 0.55rem; }
+  ul.role-bullets li:last-child { margin-bottom: 0; }
+  ul.role-bullets li::marker { color: var(--rule-strong); }
+  ul.role-bullets strong { color: var(--ink); font-weight: 600; }
+
+  /* ---- Impact stat strip ---- */
+
+  ul.stat-grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    margin: 0;
+    padding: 0;
+  }
+
+  ul.stat-grid li {
+    background: var(--surface);
+    padding: 1rem 1.1rem;
+  }
+
+  ul.stat-grid .stat-num {
+    display: block;
+    font-family: "Source Serif 4", Georgia, serif;
+    font-weight: 700;
+    font-size: 1.35rem;
+    color: var(--accent);
+    margin-bottom: 0.2rem;
+  }
+
+  ul.stat-grid .stat-desc {
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+  }
+
+  @media (max-width: 520px) {
+    ul.stat-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ---- Simple lists (collab / additional) ---- */
+
+  ul.plain-list {
+    margin: 0;
+    padding-left: 1.15rem;
+    color: var(--ink-soft);
+  }
+  ul.plain-list li { margin-bottom: 0.55rem; }
+  ul.plain-list li:last-child { margin-bottom: 0; }
+  ul.plain-list li::marker { color: var(--rule-strong); }
+
+  /* ---- Education / two-column meta list ---- */
+
+  ul.credential-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  ul.credential-list li {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  ul.credential-list .credential-name { font-weight: 600; }
+  ul.credential-list .credential-org {
+    color: var(--ink-faint);
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.82rem;
+    text-align: right;
+  }
+
+  /* ---- Footer ---- */
+
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.78rem;
+    color: var(--ink-faint);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .no-print { }
+
+  /* ---- Print ---- */
+
+  @media print {
+    body { background: #fff; }
+    .page { max-width: none; padding: 0; }
+    .sheet { box-shadow: none; border: none; padding: 0.2in 0.35in; }
+    .no-print { display: none !important; }
+    a { color: inherit; text-decoration: none; }
+    h2.section-title { break-after: avoid; }
+    .role-head { break-after: avoid; }
+    article.role { break-inside: avoid; }
+    ul.stat-grid { break-inside: avoid; }
+    ul.stat-grid li { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="sheet">
+
+    <header class="masthead">
+      <div class="masthead-top">
+        <div class="identity">
+          <h1 class="name">Prasad MK</h1>
+          <p class="role-line">Solution Architect · Technical Lead · SRE · Cloud Infrastructure &amp; AI-Driven Operations</p>
+        </div>
+        <a class="download-btn no-print" href="Prasad_MK.pdf" download="Prasad_MK.pdf">↓ Download PDF</a>
+      </div>
+      <ul class="contact-line">
+        <li><a href="tel:+12792459209">+1 (279) 245-9209</a></li>
+        <li><a href="mailto:prasad.rocklin@gmail.com">prasad.rocklin@gmail.com</a></li>
+        <li><a href="https://linkedin.com/in/prasad-m-k" target="_blank" rel="noopener">linkedin.com/in/prasad-m-k</a></li>
+        <li><a href="https://github.com/prasad-m-k" target="_blank" rel="noopener">github.com/prasad-m-k</a></li>
+      </ul>
+      <hr>
+    </header>
+
+    <section id="summary">
+      <h2 class="section-title">Summary</h2>
+      <p class="summary">
+        Technologist with vast experience in building and operating large-scale distributed systems, including
+        8+ years as the primary SRE owner for a multi-tenant SaaS platform sustaining 99.99% uptime across the
+        Americas. Background spans C/C++ and Go systems programming, Java/Spring Boot services, and reliability
+        engineering for infrastructure processing 8TB/day through Kafka and Pulsar pipelines. Led a Kubernetes
+        migration that cut annual infrastructure cost by $2.1M and collaborated across product, engineering, and
+        support teams to drive SLO adoption at enterprise scale. Currently a Solutions Architect / SRE on a
+        70,000-user financial services platform at Wipro/PNC, with a track record of resolving 100% of Fortune
+        500 production escalations at Apple, Samsung, Disney, FedEx, and PG&amp;E.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2 class="section-title">Technical Skills</h2>
+      <dl class="skills">
+        <dt>Languages</dt>
+        <dd>Go, C/C++, Java (Spring Boot), Python, Bash, Perl</dd>
+
+        <dt>Distributed Systems</dt>
+        <dd>Large-scale distributed systems design, capacity planning, failover design, high-throughput data pipelines, multi-region SaaS architecture</dd>
+
+        <dt>Reliability / SRE</dt>
+        <dd>SLO/SLI ownership, on-call incident management, root-cause analysis, disaster recovery, runbook-as-code, 99.99% uptime ownership</dd>
+
+        <dt>Cloud &amp; IaC</dt>
+        <dd>AWS (EKS, EC2, VPC, S3, RDS, Lambda, Bedrock), GCP, Azure, Terraform, Ansible, CloudFormation</dd>
+
+        <dt>Containers &amp; CI/CD</dt>
+        <dd>Kubernetes, OpenShift, Helm, Docker, ArgoCD, Jenkins, GitLab CI, GitHub Actions</dd>
+
+        <dt>Observability</dt>
+        <dd>Dynatrace, Prometheus, Grafana, ELK Stack, PagerDuty</dd>
+
+        <dt>Data &amp; Streaming</dt>
+        <dd>Kafka, Pulsar, Kafka Connect, PostgreSQL, MySQL, DynamoDB</dd>
+      </dl>
+    </section>
+
+    <section id="experience">
+      <h2 class="section-title">Experience</h2>
+
+      <article class="role">
+        <div class="role-head">
+          <h3>Wipro Ltd. <span class="client">— Client: PNC Bank</span></h3>
+          <time>Oct 2025 – Present</time>
+        </div>
+        <p class="role-meta">Solutions Architect Site Reliability Engineer · Pittsburgh, PA</p>
+        <ul class="role-bullets">
+          <li>Architected a microservices-based Alert Management System on OpenShift/Kubernetes with a full observability stack, defining SLO targets and automated alerting that detects degradation in under 5 minutes across 70,000 enterprise users.</li>
+          <li>Built backend services in Java/Spring Boot with 100% JUnit/Mockito coverage on critical paths; led CI/CD pipeline development via Jenkins and Terraform with integrated security scanning, achieving zero critical vulnerabilities in production.</li>
+          <li>Built agentic AI backend services on AWS Bedrock with multi-agent orchestration and RAG pipelines for internal automation tooling; patent pending on the reputation-sorting agent design.</li>
+          <li>Implemented runbook-as-code and platform-as-code provisioning standards, partnering across product, security, and application teams so on-call engineers can diagnose and remediate incidents without escalation.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <div class="role-head">
+          <h3>Kakudi</h3>
+          <time>Jun 2025 – Sep 2025</time>
+        </div>
+        <p class="role-meta">Software Engineer — Cloud &amp; AI Systems · Folsom, CA</p>
+        <ul class="role-bullets">
+          <li>Designed and deployed cloud-native microservices on Kubernetes using Terraform-provisioned AWS infrastructure; built Python automation and Ansible playbooks for operational workflows.</li>
+          <li>Built agentic AI systems on AWS Bedrock with multi-agent orchestration, RAG pipelines, and CI/CD for automated model deployment; developed Voice AI agents integrating live data sources for nonprofit and real-estate clients.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <div class="role-head">
+          <h3>OpenText</h3>
+          <time>Feb 2023 – May 2025</time>
+        </div>
+        <p class="role-meta">Site Reliability Engineer · Rocklin, CA</p>
+        <ul class="role-bullets">
+          <li>Sole SRE owner for SaaS AIOps and Network Operations Manager deployments across the Americas; maintained 99.99% SLA uptime, owned SOC2 compliance and disaster recovery strategy, and cut incident resolution time by 45% through Linux kernel diagnostics and packet-level tracing.</li>
+          <li>Led migration of 50+ microservices to Kubernetes/OpenShift, compressing multi-tenant provisioning from days to 30 minutes and cutting annual cloud infrastructure cost by $2.1M through right-sizing and Terraform automation.</li>
+          <li>Built a Python-based ML cloud-cost optimizer using AWS Cost Explorer APIs, cutting quarterly cloud spend by 20%, and developed Go-based metric collectors pulling performance data from AWS, Azure, and GCP into a central correlation engine.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <div class="role-head">
+          <h3>Micro Focus</h3>
+          <time>Sep 2017 – Jan 2023</time>
+        </div>
+        <p class="role-meta">Site Reliability Engineer / DevOps Engineer · Santa Clara, CA</p>
+        <ul class="role-bullets">
+          <li>Progressed from DevOps Engineer to SRE for OpsBridge Manager (AIOps) and Network Operations Manager; built Kafka and Pulsar telemetry pipelines processing 8TB/day at sub-second latency with end-to-end delivery guarantees into a central data lake.</li>
+          <li>Built the Automated Event Correlation (AEC) engine for OpsBridge Manager, grouping related alerts by topology and time proximity to cut alert noise and surface root-cause events faster during high-volume incidents.</li>
+          <li>Owned the Terraform module library, reducing environment provisioning time by 70%, and automated product deployments for new customer onboarding, cutting manual setup work by 80%.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <div class="role-head">
+          <h3>Hewlett Packard Enterprise (HPE)</h3>
+          <time>Nov 2015 – Aug 2017</time>
+        </div>
+        <p class="role-meta">Software Designer · Sunnyvale, CA</p>
+        <ul class="role-bullets">
+          <li>Engineered event back-sync modules and product integrations for Operations Bridge Manager; built collectors for key performance indicators across VM technologies (vCenter, KVM).</li>
+          <li>Managed technical issues for assigned projects and worked cross-functionally with development teams to analyze system solutions against evolving client requirements, reducing days-to-resolve on customer-encountered defects.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <div class="role-head">
+          <h3>Hewlett Packard (HP)</h3>
+          <time>Sep 2004 – Oct 2015</time>
+        </div>
+        <p class="role-meta">Software Designer · Sunnyvale, CA / Bangalore, IND</p>
+        <ul class="role-bullets">
+          <li>Scaled the Backbone Communication Component from 2,000 to 10,000 concurrent connections in C/C++; built a reverse-channel proxy enabling platform connectivity through a single outbound connection with no inbound firewall rules.</li>
+          <li>Engineered embedded Perl memory caching that enabled two years of uninterrupted operation in mission-critical environments; developed a custom log-hashing algorithm that reduced false-positive alerts by 60%.</li>
+          <li>Resolved 100% of high-priority on-site escalations at Apple, Samsung, Disney, FedEx, and PG&amp;E through architecture-level root-cause analysis; recipient of HP's Global High Impact Award (2005).</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <div class="role-head">
+          <h3>ProcSys</h3>
+          <time>Sep 1999 – Aug 2004</time>
+        </div>
+        <p class="role-meta">Software Engineer · Bangalore, IND</p>
+        <ul class="role-bullets">
+          <li>Built OpsXML, an intent-driven, declarative framework for automating Cisco router configuration. One of the earliest infrastructure-as-code implementations for physical networking.</li>
+          <li>Built an eLearning platform for Cisco devices used by thousands of students prepping for the CCNA exam.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="impact">
+      <h2 class="section-title">Reliability &amp; Scale Impact</h2>
+      <ul class="stat-grid">
+        <li>
+          <span class="stat-num">99.99%</span>
+          <span class="stat-desc">Uptime sustained as sole SRE owner of a multi-tenant SaaS platform across the Americas, with zero missed SLA commitments over 8 years.</span>
+        </li>
+        <li>
+          <span class="stat-num">$2.1M</span>
+          <span class="stat-desc">Annual infrastructure cost cut through Kubernetes consolidation and right-sizing, validated against pre-migration cloud billing baselines.</span>
+        </li>
+        <li>
+          <span class="stat-num">8TB/day</span>
+          <span class="stat-desc">Telemetry throughput sustained at sub-second delivery latency across Kafka and Pulsar pipelines feeding a real-time correlation engine.</span>
+        </li>
+        <li>
+          <span class="stat-num">100%</span>
+          <span class="stat-desc">Resolution rate on high-priority on-site escalations across Fortune 500 accounts, each requiring architecture-level root-cause work under live production pressure.</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="collaboration">
+      <h2 class="section-title">Cross-Functional Collaboration</h2>
+      <ul class="plain-list">
+        <li>Partnered with product, security, and application teams at Wipro/PNC to define SLO targets and provisioning standards adopted across a 70,000-user platform.</li>
+        <li>Worked directly with R&amp;D and support leadership at Micro Focus/OpenText, feeding customer and field data back into the product roadmap for 30+ production SaaS deployments.</li>
+        <li>Led pre-sales discovery calls and client-facing solution presentations at Kakudi, translating stakeholder requirements into cost and timeline scoping for nonprofit and real-estate clients.</li>
+      </ul>
+    </section>
+
+    <section id="education">
+      <h2 class="section-title">Education</h2>
+      <ul class="credential-list">
+        <li>
+          <span class="credential-name">Master of Science (MS), Software Engineering</span>
+          <span class="credential-org">BITS Pilani</span>
+        </li>
+        <li>
+          <span class="credential-name">Bachelor of Engineering (BE), Computer Science &amp; Engineering</span>
+          <span class="credential-org">University of Mysore</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="publications">
+      <h2 class="section-title">Publications &amp; IP</h2>
+      <ul class="plain-list">
+        <li>"Day One AI: From Your First Job to Your First Product" (Amazon Kindle, ISBN 979-8-9957306-0-6).</li>
+        <li>SSRN Author ID 10270516 — papers on AI governance, agent security policy, and fiscal policy for autonomous systems, including "Taxing the AI Agents" (No. 6194458).</li>
+        <li>Wipro patent pending: Generation-Bound Cache Invalidation.</li>
+      </ul>
+    </section>
+
+    <section id="additional">
+      <h2 class="section-title">Additional</h2>
+      <ul class="plain-list">
+        <li>Volunteer AI instructor for high school students; STEM event judge; contributor to Better Programming, dev.to, and Hashnode.</li>
+        <li>Cloud Computing certificate, Stanford Continuing Studies.</li>
+        <li>ORCID: 0009-0004-9496-6339.</li>
+      </ul>
+    </section>
+
+    <footer>
+      <span>Prasad MK — Résumé</span>
+      <span class="no-print">Updated August 2026</span>
+    </footer>
+
+  </div>
+</div>
+</body>
+</html>
