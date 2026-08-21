@@ -91,14 +91,18 @@
   }
 
   .masthead-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
     gap: 1.5rem;
-    flex-wrap: wrap;
   }
 
+  .identity { min-width: 0; }
+
   .download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     flex-shrink: 0;
     font-family: "IBM Plex Mono", ui-monospace, monospace;
     font-size: 0.78rem;
@@ -110,10 +114,16 @@
     padding: 0.55rem 0.95rem;
     text-decoration: none;
     white-space: nowrap;
-    margin-top: 0.3rem;
+    margin-top: 0.35rem;
     transition: background 0.15s ease, border-color 0.15s ease;
   }
   .download-btn:hover { border-color: var(--accent); }
+  .download-btn .icon { width: 14px; height: 14px; flex-shrink: 0; }
+
+  @media (max-width: 480px) {
+    .masthead-top { grid-template-columns: 1fr; }
+    .download-btn { justify-content: center; margin-top: 1rem; }
+  }
 
   h1.name {
     font-family: "Source Serif 4", Georgia, serif;
@@ -136,7 +146,8 @@
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    gap: 0 0.85rem;
+    row-gap: 0.6rem;
+    column-gap: 1.6rem;
     padding: 0;
     margin: 0 0 1.6rem;
     font-family: "IBM Plex Mono", ui-monospace, monospace;
@@ -144,14 +155,17 @@
     color: var(--ink-soft);
   }
 
-  ul.contact-line li { display: flex; align-items: center; gap: 0.85rem; }
-  ul.contact-line li:not(:last-child)::after {
-    content: "·";
-    color: var(--rule-strong);
-    margin-left: 0.85rem;
+  ul.contact-line li { display: flex; align-items: center; }
+  ul.contact-line a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--ink-soft);
+    text-decoration: none;
   }
-  ul.contact-line a { color: var(--ink-soft); }
   ul.contact-line a:hover { color: var(--link); }
+  ul.contact-line .icon { width: 14px; height: 14px; flex-shrink: 0; color: var(--ink-faint); }
+  ul.contact-line a:hover .icon { color: var(--link); }
 
   header.masthead hr {
     border: none;
@@ -373,13 +387,36 @@
           <h1 class="name">Prasad MK</h1>
           <p class="role-line">Solution Architect · Technical Lead · SRE · Cloud Infrastructure &amp; AI-Driven Operations</p>
         </div>
-        <a class="download-btn no-print" href="Prasad_MK.pdf" download="Prasad_MK.pdf">↓ Download PDF</a>
+        <a class="download-btn no-print" href="Prasad_MK.pdf" download="Prasad_MK.pdf">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download PDF
+        </a>
       </div>
       <ul class="contact-line">
-        <li><a href="tel:+12792459209">+1 (279) 245-9209</a></li>
-        <li><a href="mailto:prasad.rocklin@gmail.com">prasad.rocklin@gmail.com</a></li>
-        <li><a href="https://linkedin.com/in/prasad-m-k" target="_blank" rel="noopener">linkedin.com/in/prasad-m-k</a></li>
-        <li><a href="https://github.com/prasad-m-k" target="_blank" rel="noopener">github.com/prasad-m-k</a></li>
+        <li>
+          <a href="tel:+12792459209">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +1 (279) 245-9209
+          </a>
+        </li>
+        <li>
+          <a href="mailto:prasad.rocklin@gmail.com">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg>
+            prasad.rocklin@gmail.com
+          </a>
+        </li>
+        <li>
+          <a href="https://linkedin.com/in/prasad-m-k" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.44-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+            linkedin.com/in/prasad-m-k
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/prasad-m-k" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.36-3.37-1.36-.46-1.19-1.11-1.51-1.11-1.51-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.31.1-2.72 0 0 .84-.27 2.75 1.05a9.32 9.32 0 0 1 2.5-.34c.85 0 1.71.11 2.5.34 1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.64 1.03 2.76 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.82 0 .27.18.6.69.49A10.03 10.03 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+            github.com/prasad-m-k
+          </a>
+        </li>
       </ul>
       <hr>
     </header>
