@@ -4,53 +4,50 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Prasad MK  Résumé</title>
-<meta name="description" content="Solution Architect · Technical Lead · Full Stack SRE · Cloud Infrastructure & AI-Driven Operations">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta name="description" content="Site Reliability Engineer Lead · Distributed Systems · Cloud Infrastructure · AI Platforms">
 <style>
   :root {
-    --bg: #f6f7f9;
+    --bg: #f5f5f7;
     --surface: #ffffff;
-    --ink: #1b1f27;
-    --ink-soft: #4b5563;
-    --ink-faint: #6b7280;
-    --rule: #e2e5ea;
-    --rule-strong: #cdd2da;
-    --accent: #2f6a67;
-    --accent-soft: #e7eeed;
-    --link: #2f6a67;
-    --shadow: 0 1px 2px rgba(20, 24, 32, 0.04), 0 8px 24px rgba(20, 24, 32, 0.05);
+    --ink: #1d1d1f;
+    --ink-soft: #4b4b4d;
+    --ink-faint: #6e6e73;
+    --rule: #e5e5e7;
+    --rule-strong: #d2d2d7;
+    --accent: #0071e3;
+    --accent-soft: #e8f2fe;
+    --link: #0071e3;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 8px 24px rgba(0, 0, 0, 0.05);
   }
 
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg: #14161a;
-      --surface: #1b1e24;
-      --ink: #edeff2;
-      --ink-soft: #aeb4bf;
-      --ink-faint: #868d99;
-      --rule: #2b303a;
-      --rule-strong: #3a404c;
-      --accent: #74b8b1;
-      --accent-soft: #202b2a;
-      --link: #82c4bd;
-      --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
+      --bg: #0b0b0d;
+      --surface: #1c1c1e;
+      --ink: #f5f5f7;
+      --ink-soft: #b8b8bd;
+      --ink-faint: #8a8a8e;
+      --rule: #2d2d30;
+      --rule-strong: #3d3d40;
+      --accent: #2997ff;
+      --accent-soft: #14243a;
+      --link: #2997ff;
+      --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.4);
     }
   }
 
   :root[data-theme="dark"] {
-    --bg: #14161a;
-    --surface: #1b1e24;
-    --ink: #edeff2;
-    --ink-soft: #aeb4bf;
-    --ink-faint: #868d99;
-    --rule: #2b303a;
-    --rule-strong: #3a404c;
-    --accent: #74b8b1;
-    --accent-soft: #202b2a;
-    --link: #82c4bd;
-    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
+    --bg: #0b0b0d;
+    --surface: #1c1c1e;
+    --ink: #f5f5f7;
+    --ink-soft: #b8b8bd;
+    --ink-faint: #8a8a8e;
+    --rule: #2d2d30;
+    --rule-strong: #3d3d40;
+    --accent: #2997ff;
+    --accent-soft: #14243a;
+    --link: #2997ff;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.4);
   }
 
   * { box-sizing: border-box; }
@@ -61,7 +58,7 @@
     margin: 0;
     background: var(--bg);
     color: var(--ink);
-    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
@@ -104,7 +101,7 @@
     align-items: center;
     gap: 0.5rem;
     flex-shrink: 0;
-    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
     font-size: 0.78rem;
     letter-spacing: 0.02em;
     color: var(--accent);
@@ -126,20 +123,21 @@
   }
 
   h1.name {
-    font-family: "Source Serif 4", Georgia, serif;
+    font-family: inherit;
     font-weight: 700;
-    font-size: clamp(2rem, 5vw, 2.6rem);
-    letter-spacing: -0.01em;
-    margin: 0 0 0.35rem;
+    font-size: clamp(1.625rem, 4vw, 1.875rem);
+    letter-spacing: -0.015em;
+    margin: 0 0 0.3rem;
     text-wrap: balance;
   }
 
   p.role-line {
-    font-family: "Source Serif 4", Georgia, serif;
-    font-style: italic;
-    font-size: 1.1rem;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.9375rem;
     color: var(--ink-soft);
-    margin: 0 0 1.1rem;
+    margin: 0 0 1rem;
   }
 
   ul.contact-line {
@@ -150,13 +148,14 @@
     column-gap: 1.6rem;
     padding: 0;
     margin: 0 0 1.6rem;
-    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
     font-size: 0.82rem;
     color: var(--ink-soft);
   }
 
   ul.contact-line li { display: flex; align-items: center; }
-  ul.contact-line a {
+  ul.contact-line a,
+  ul.contact-line .static-item {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -179,7 +178,7 @@
   section:first-of-type { margin-top: 0; }
 
   h2.section-title {
-    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
     font-size: 0.72rem;
     font-weight: 500;
     letter-spacing: 0.14em;
@@ -192,36 +191,67 @@
 
   p.summary {
     color: var(--ink-soft);
-    font-size: 1.01rem;
+    font-size: 0.9rem;
     max-width: 66ch;
   }
 
+  p.summary strong { color: var(--ink); font-weight: 600; }
+
   /* ---- Skills grid ---- */
 
-  dl.skills {
-    display: grid;
-    grid-template-columns: minmax(9rem, 13rem) 1fr;
-    row-gap: 0.65rem;
-    column-gap: 1.25rem;
-    margin: 0;
+  table.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8125rem;
   }
 
-  dl.skills dt {
-    font-family: "IBM Plex Mono", ui-monospace, monospace;
-    font-size: 0.78rem;
+  table.skills-table th {
+    text-align: left;
+    font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     color: var(--ink-faint);
-    padding-top: 0.15rem;
+    padding: 0 0.75rem 0.4rem 0;
+    border-bottom: 1px solid var(--rule-strong);
   }
 
-  dl.skills dd {
-    margin: 0;
+  table.skills-table td {
+    padding: 0.5rem 0.75rem 0.5rem 0;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+
+  table.skills-table tr:last-child td { border-bottom: none; }
+
+  table.skills-table td:first-child {
+    width: 9.5rem;
+    font-weight: 600;
     color: var(--ink);
+    white-space: nowrap;
+  }
+
+  table.skills-table td:last-child { color: var(--ink-soft); }
+
+  @media (max-width: 480px) {
+    table.skills-table td:first-child { width: auto; white-space: normal; }
   }
 
   /* ---- Experience ---- */
 
+  p.role-note {
+    font-size: 0.75rem;
+    font-style: italic;
+    color: var(--ink-faint);
+    border-left: 2px solid var(--rule-strong);
+    padding: 0.1rem 0 0.1rem 0.85rem;
+    margin: 0 0 1.4rem;
+    max-width: 66ch;
+  }
+
   article.role {
-    padding: 1.15rem 0;
+    padding: 1.65rem 0;
     border-bottom: 1px solid var(--rule);
   }
   article.role:last-child { border-bottom: none; padding-bottom: 0; }
@@ -233,12 +263,12 @@
     align-items: baseline;
     gap: 1rem;
     flex-wrap: wrap;
-    margin-bottom: 0.15rem;
+    margin-bottom: 0.1rem;
   }
 
   .role-head h3 {
     margin: 0;
-    font-size: 1.06rem;
+    font-size: 0.9375rem;
     font-weight: 600;
   }
   .role-head h3 .client {
@@ -247,27 +277,29 @@
   }
 
   .role-head time {
-    font-family: "IBM Plex Mono", ui-monospace, monospace;
-    font-size: 0.78rem;
+    font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.72rem;
     color: var(--ink-faint);
     white-space: nowrap;
     font-variant-numeric: tabular-nums;
   }
 
   p.role-meta {
-    margin: 0 0 0.75rem;
+    margin: 0 0 0.6rem;
     font-style: italic;
-    font-family: "Source Serif 4", Georgia, serif;
+    font-family: inherit;
     color: var(--ink-soft);
-    font-size: 0.95rem;
+    font-size: 0.8125rem;
   }
 
   ul.role-bullets {
     margin: 0;
-    padding-left: 1.15rem;
+    padding-left: 1.1rem;
     color: var(--ink-soft);
+    font-size: 0.6875rem;
+    line-height: 1.55;
   }
-  ul.role-bullets li { margin-bottom: 0.55rem; }
+  ul.role-bullets li { margin-bottom: 0.3rem; }
   ul.role-bullets li:last-child { margin-bottom: 0; }
   ul.role-bullets li::marker { color: var(--rule-strong); }
   ul.role-bullets strong { color: var(--ink); font-weight: 600; }
@@ -292,11 +324,12 @@
 
   ul.stat-grid .stat-num {
     display: block;
-    font-family: "Source Serif 4", Georgia, serif;
+    font-family: inherit;
     font-weight: 700;
     font-size: 1.35rem;
     color: var(--accent);
     margin-bottom: 0.2rem;
+    letter-spacing: -0.01em;
   }
 
   ul.stat-grid .stat-desc {
@@ -314,8 +347,9 @@
     margin: 0;
     padding-left: 1.15rem;
     color: var(--ink-soft);
+    font-size: 0.8125rem;
   }
-  ul.plain-list li { margin-bottom: 0.55rem; }
+  ul.plain-list li { margin-bottom: 0.4rem; }
   ul.plain-list li:last-child { margin-bottom: 0; }
   ul.plain-list li::marker { color: var(--rule-strong); }
 
@@ -340,7 +374,7 @@
   ul.credential-list .credential-name { font-weight: 600; }
   ul.credential-list .credential-org {
     color: var(--ink-faint);
-    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
     font-size: 0.82rem;
     text-align: right;
   }
@@ -374,6 +408,8 @@
     article.role { break-inside: avoid; }
     ul.stat-grid { break-inside: avoid; }
     ul.stat-grid li { break-inside: avoid; }
+    table.skills-table { break-inside: avoid; }
+    table.skills-table tr { break-inside: avoid; }
   }
 </style>
 </head>
@@ -385,7 +421,7 @@
       <div class="masthead-top">
         <div class="identity">
           <h1 class="name">Prasad MK</h1>
-          <p class="role-line">Solution Architect · Technical Lead · Full Stack SRE · Cloud Infrastructure &amp; AI-Driven Operations</p>
+          <p class="role-line">Site Reliability Engineer Lead · Distributed Systems · Cloud Infrastructure · AI Platforms</p>
         </div>
         <a class="download-btn no-print" href="Prasad_MK.pdf" download="Prasad_MK.pdf">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -393,6 +429,12 @@
         </a>
       </div>
       <ul class="contact-line">
+        <li>
+          <span class="static-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Rocklin, CA
+          </span>
+        </li>
         <li>
           <a href="tel:+12792459209">
             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -424,44 +466,39 @@
     <section id="summary">
       <h2 class="section-title">Summary</h2>
       <p class="summary">
-        Technologist with vast experience in building and operating large-scale distributed systems, including
-        8+ years as the primary Full Stack SRE owner for a multi-tenant SaaS platform sustaining 99.99% uptime across the
-        Americas. Background spans C/C++ and Go systems programming, Java/Spring Boot services, and reliability
-        engineering for infrastructure processing 8TB/day through Kafka and Pulsar pipelines. Led a Kubernetes
-        migration that cut annual infrastructure cost by $2.1M and collaborated across product, engineering, and
-        support teams to drive SLO adoption at enterprise scale. Currently a Solutions Architect / Technical Lead on a
-        70,000-user financial services platform at Wipro/PNC, with a track record of resolving 100% of Fortune
-        500 production escalations at Apple, Samsung, Disney, FedEx, and PG&amp;E.
+        Technologist with 25+ years designing, operating, and scaling large-scale distributed systems, including 8 years
+        as sole SRE owner of a multi-tenant AIOps SaaS platform holding <strong>99.99% uptime</strong> across the Americas.
+        Owned full-lifecycle production readiness, capacity planning, and on-call incident response for a platform
+        processing <strong>8TB/day</strong> at sub-second latency, cutting incident resolution time <strong>45%</strong>
+        and replacing manual toil with automation to save <strong>$2.1M a year</strong> in infrastructure cost.
+        Directly supported <strong>Apple's own tenancy</strong> on this platform, keeping Operations Agent and
+        Performance Agent telemetry flowing through Cloud Optimizer into Apple's Vertica data farm. Now building
+        agentic AI backend services on AWS Bedrock with multi-agent orchestration and RAG pipelines, and driving
+        AI-assisted tooling adoption into day-to-day reliability workflows. Published researcher on AI agent security
+        policy and trust-boundary frameworks, with a pending patent on Generation-Bound Cache Invalidation.
       </p>
     </section>
 
     <section id="skills">
       <h2 class="section-title">Technical Skills</h2>
-      <dl class="skills">
-        <dt>Languages</dt>
-        <dd>Go, C/C++, Java (Spring Boot), Python, Bash, Perl</dd>
-
-        <dt>Distributed Systems</dt>
-        <dd>Large-scale distributed systems design, capacity planning, failover design, high-throughput data pipelines, multi-region SaaS architecture</dd>
-
-        <dt>Reliability / SRE</dt>
-        <dd>SLO/SLI ownership, on-call incident management, root-cause analysis, disaster recovery, runbook-as-code, 99.99% uptime ownership</dd>
-
-        <dt>Cloud &amp; IaC</dt>
-        <dd>AWS (EKS, EC2, VPC, S3, RDS, Lambda, Bedrock), GCP, Azure, Terraform, Ansible, CloudFormation</dd>
-
-        <dt>Containers &amp; CI/CD</dt>
-        <dd>Kubernetes, OpenShift, Helm, Docker, ArgoCD, Jenkins, GitLab CI, GitHub Actions</dd>
-
-        <dt>Observability</dt>
-        <dd>Dynatrace, Prometheus, Grafana, ELK Stack, PagerDuty</dd>
-
-        <dt>Data &amp; Streaming</dt>
-        <dd>Kafka, Pulsar, Kafka Connect, PostgreSQL, MySQL, DynamoDB</dd>
-
-        <dt>AI &amp; Agentic Systems</dt>
-        <dd>LLMs, AWS Bedrock, multi-agent orchestration, RAG pipelines, LangChain, Vector Databases, Voice AI integration</dd>
-      </dl>
+      <table class="skills-table">
+        <thead>
+          <tr><th>Area</th><th>Technologies</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Languages</td><td>Python &middot; Go &middot; Java (Spring Boot) &middot; Bash &middot; Perl &middot; C/C++ &middot; SQL &middot; JavaScript</td></tr>
+          <tr><td>AI &amp; Agentic Systems</td><td>AWS Bedrock multi-agent orchestration &middot; RAG pipelines &middot; vector retrieval &middot; AWS SageMaker &middot; ML-based event correlation &middot; model deployment automation &middot; AI-assisted diagnostics &amp; copilot tooling adoption</td></tr>
+          <tr><td>Reliability Practice</td><td>SLO/SLI ownership &middot; production readiness reviews &middot; capacity planning &middot; on-call incident response &middot; runbook-as-code &middot; blameless postmortems</td></tr>
+          <tr><td>GCP</td><td>GKE &middot; Cloud Monitoring &middot; Vertex AI &middot; Cloud Functions &middot; cross-cloud metric collection &amp; normalization</td></tr>
+          <tr><td>AWS</td><td>EKS &middot; EC2 &middot; VPC &middot; S3 &middot; RDS &middot; Lambda &middot; Bedrock &middot; Cost Explorer &middot; SageMaker &middot; CloudWatch</td></tr>
+          <tr><td>IaC</td><td>Terraform &middot; Ansible &middot; CloudFormation &middot; multi-cloud architecture (AWS + GCP) &middot; bare-metal &amp; hybrid topology design</td></tr>
+          <tr><td>Governance &amp; Compliance</td><td>Agent trust boundary design (preprint) &middot; SOC2 compliance &middot; DR strategy &middot; access controls &middot; security scanning (0% critical vulns in prod)</td></tr>
+          <tr><td>Containers &amp; CI/CD</td><td>Kubernetes &middot; OpenShift &middot; Helm &middot; Docker &middot; ArgoCD &middot; Jenkins &middot; GitLab CI &middot; GitHub Actions</td></tr>
+          <tr><td>Observability</td><td>Dynatrace &middot; Prometheus &middot; Grafana &middot; OpenTelemetry &middot; HPE/Micro Focus AIOps stack (Operations Agent, Performance Agent, OMi, Cloud Optimizer)</td></tr>
+          <tr><td>Data &amp; Streaming</td><td>Kafka &middot; Pulsar &middot; Kafka Connect (8TB/day at sub-second latency) &middot; PostgreSQL &middot; MS SQL &middot; DynamoDB &middot; Vertica</td></tr>
+          <tr><td>Systems</td><td>Linux internals (RHEL, Ubuntu, SUSE) &middot; TCP/IP &middot; DNS &middot; TLS &middot; IPv4/IPv6 migration &middot; packet-level tracing</td></tr>
+        </tbody>
+      </table>
     </section>
 
     <section id="experience">
@@ -472,12 +509,14 @@
           <h3>Wipro Ltd. <span class="client">— Client: PNC Bank</span></h3>
           <time>Oct 2025 – Present</time>
         </div>
-        <p class="role-meta">Solutions Architect Site Reliability Engineer · Pittsburgh, PA</p>
+        <p class="role-meta">Solutions Architect | Technical Lead · Pittsburgh, PA</p>
         <ul class="role-bullets">
-          <li>Architected a microservices-based Alert Management System on OpenShift/Kubernetes with a full observability stack, defining SLO targets and automated alerting that detects degradation in under 5 minutes across 70,000 enterprise users.</li>
-          <li>Built backend services in Java/Spring Boot with 100% JUnit/Mockito coverage on critical paths; led CI/CD pipeline development via Jenkins and Terraform with integrated security scanning, achieving zero critical vulnerabilities in production.</li>
-          <li>Built agentic AI backend services on AWS Bedrock with multi-agent orchestration and RAG pipelines for internal automation tooling; patent pending on the reputation-sorting agent design.</li>
-          <li>Implemented runbook-as-code and platform-as-code provisioning standards, partnering across product, security, and application teams so on-call engineers can diagnose and remediate incidents without escalation.</li>
+          <li>Own architecture and production readiness for a microservices-based Alert Management System on OpenShift/Kubernetes with a full Dynatrace observability stack, setting SLO targets and automated alerting that catches degradation in <strong>under 5 minutes across 70,000 users</strong>.</li>
+          <li>Lead capacity planning and Platform-as-Code provisioning standards on Bitbucket, enabling on-call engineers to diagnose and resolve incidents without escalation.</li>
+          <li>Write backend microservices in Java/Spring Boot with JUnit/Mockito coverage on critical paths; architect CI/CD pipelines in Jenkins and Terraform with embedded security scanning, holding production at <strong>0% critical vulnerabilities</strong>.</li>
+          <li>Partner across development and operations teams to drive continuous deployment adoption; lead rollout of Copilot-based AI tooling across engineering workflows, cutting time spent on boilerplate and code review.</li>
+          <li>Implement Kubernetes Vertical Pod Autoscaler across the organization for better resource planning and allocation.</li>
+          <li>Building a Kafka-based branch closure notification system, publishing closure events to downstream consumers in real time so affected teams and customer-facing systems could react without polling or manual coordination.</li>
         </ul>
       </article>
 
@@ -486,36 +525,31 @@
           <h3>Kakudi</h3>
           <time>Jun 2025 – Sep 2025</time>
         </div>
-        <p class="role-meta">Software Engineer — Cloud &amp; AI Systems · Folsom, CA</p>
+        <p class="role-meta">Software Engineer, Pre-Sales AI Systems · Folsom, CA</p>
         <ul class="role-bullets">
-          <li>Designed and deployed cloud-native microservices on Kubernetes using Terraform-provisioned AWS infrastructure; built Python automation and Ansible playbooks for operational workflows.</li>
-          <li>Built agentic AI systems on AWS Bedrock with multi-agent orchestration, RAG pipelines, and CI/CD for automated model deployment; developed Voice AI agents integrating live data sources for nonprofit and real-estate clients.</li>
+          <li>Built agentic AI systems on AWS Bedrock with multi-agent orchestration, RAG pipelines, and automated CI/CD model deployment; built Voice AI agents pulling from live data sources.</li>
+          <li>Designed and deployed cloud-native microservices on Kubernetes using Terraform-provisioned AWS infrastructure; wrote Python automation and Ansible playbooks for operational workflows.</li>
+          <li>Contributed to proposals and statements of work (SOWs) and presented technical solutions directly to prospective clients.</li>
+          <li>Ran client discovery calls and scoped project costs and timelines for client engagements, mainly non-profit organizations.</li>
         </ul>
       </article>
 
+      <p class="role-note">HP, HPE, Micro Focus, and OpenText are one continuous employer, joined by a corporate split and two acquisitions. The four roles below span 21 years in the same systems management product line, from on-premise agents to today's AIOps SaaS platform.</p>
+
       <article class="role">
         <div class="role-head">
-          <h3>OpenText</h3>
-          <time>Feb 2023 – May 2025</time>
+          <h3>Micro Focus / OpenText</h3>
+          <time>Sep 2017 – May 2025</time>
         </div>
         <p class="role-meta">Site Reliability Engineer · Rocklin, CA</p>
         <ul class="role-bullets">
-          <li>Sole SRE owner for SaaS AIOps and Network Operations Manager deployments across the Americas; maintained 99.99% SLA uptime, owned SOC2 compliance and disaster recovery strategy, and cut incident resolution time by 45% through Linux kernel diagnostics and packet-level tracing.</li>
-          <li>Led migration of 50+ microservices to Kubernetes/OpenShift, compressing multi-tenant provisioning from days to 30 minutes and cutting annual cloud infrastructure cost by $2.1M through right-sizing and Terraform automation.</li>
-          <li>Built a Python-based ML cloud-cost optimizer using AWS Cost Explorer APIs, cutting quarterly cloud spend by 20%, and developed Go-based metric collectors pulling performance data from AWS, Azure, and GCP into a central correlation engine.</li>
-        </ul>
-      </article>
-
-      <article class="role">
-        <div class="role-head">
-          <h3>Micro Focus</h3>
-          <time>Sep 2017 – Jan 2023</time>
-        </div>
-        <p class="role-meta">Site Reliability Engineer / DevOps Engineer · Santa Clara, CA</p>
-        <ul class="role-bullets">
-          <li>Progressed from DevOps Engineer to SRE for OpsBridge Manager (AIOps) and Network Operations Manager; built Kafka and Pulsar telemetry pipelines processing 8TB/day at sub-second latency with end-to-end delivery guarantees into a central data lake.</li>
-          <li>Built the Automated Event Correlation (AEC) engine for OpsBridge Manager, grouping related alerts by topology and time proximity to cut alert noise and surface root-cause events faster during high-volume incidents.</li>
-          <li>Owned the Terraform module library, reducing environment provisioning time by 70%, and automated product deployments for new customer onboarding, cutting manual setup work by 80%.</li>
+          <li>Progressed from DevOps Engineer to full-stack SRE owner of Operations Bridge Manager, an enterprise AIOps SaaS platform serving customers across the Americas; held <strong>99.99% SLA uptime for 8 straight years</strong> and cut incident resolution time <strong>45%</strong> through Linux kernel diagnostics and packet-level tracing.</li>
+          <li>Ran production readiness reviews and capacity planning for <strong>Apple's own tenancy</strong> on the multi-tenant OMi platform, keeping Operations Agent and Performance Agent telemetry flowing through Cloud Optimizer into Apple's Vertica data farm.</li>
+          <li>Built the Automated Event Correlation (AEC) engine, a machine learning model that groups related alerts by topology and event history, cutting alert noise and surfacing root-cause events faster during high-volume incidents.</li>
+          <li>Developed the Agent Metric Collector, a Go-based service pulling and normalizing performance metrics from AWS and GCP into a central correlation engine for cross-cloud alerting.</li>
+          <li>Led migration of 50+ microservices to Kubernetes/OpenShift, cutting multi-tenant provisioning time from days to <strong>30 minutes</strong> and saving <strong>$2.1M a year</strong> in cloud infrastructure cost through right-sizing and Terraform automation.</li>
+          <li>Built Kafka and Pulsar telemetry pipelines processing <strong>8TB/day</strong> at sub-second latency; built a Python-based ML cost optimizer against the AWS Cost Explorer API that cut quarterly spend <strong>20%</strong>.</li>
+          <li>Owned SOC2 compliance and DR strategy for the organization, including quarterly audits of access controls and security policy.</li>
         </ul>
       </article>
 
@@ -524,10 +558,11 @@
           <h3>Hewlett Packard Enterprise (HPE)</h3>
           <time>Nov 2015 – Aug 2017</time>
         </div>
-        <p class="role-meta">Software Designer · Sunnyvale, CA</p>
+        <p class="role-meta">Product Engineer | Software Designer · Sunnyvale, CA</p>
         <ul class="role-bullets">
-          <li>Engineered event back-sync modules and product integrations for Operations Bridge Manager; built collectors for key performance indicators across VM technologies (vCenter, KVM).</li>
-          <li>Managed technical issues for assigned projects and worked cross-functionally with development teams to analyze system solutions against evolving client requirements, reducing days-to-resolve on customer-encountered defects.</li>
+          <li>Sustained Fortune 500 technical escalation leadership through the HP/HPE corporate split, holding a <strong>100% resolution rate</strong> on high-priority incidents.</li>
+          <li>Built a Patch Manager that automated hotfix packaging, validation, and rollout for Operations Agent, cutting manual patch errors and customer-impacting regressions.</li>
+          <li>Designed KPI collection frameworks for KVM and Helium hypervisors, feeding metrics into centralized observability stacks and improving visibility across multi-tenant environments.</li>
         </ul>
       </article>
 
@@ -536,23 +571,25 @@
           <h3>Hewlett Packard (HP)</h3>
           <time>Sep 2004 – Oct 2015</time>
         </div>
-        <p class="role-meta">Software Designer · Sunnyvale, CA / Bangalore, IND</p>
+        <p class="role-meta">Product Engineer | Software Designer · Sunnyvale, CA / Bangalore, IND</p>
         <ul class="role-bullets">
-          <li>Scaled the Backbone Communication Component from 2,000 to 10,000 concurrent connections in C/C++; built a reverse-channel proxy enabling platform connectivity through a single outbound connection with no inbound firewall rules.</li>
-          <li>Engineered embedded Perl memory caching that enabled two years of uninterrupted operation in mission-critical environments; developed a custom log-hashing algorithm that reduced false-positive alerts by 60%.</li>
-          <li>Resolved 100% of high-priority on-site escalations at Apple, Samsung, Disney, FedEx, and PG&amp;E through architecture-level root-cause analysis; recipient of HP's Global High Impact Award (2005).</li>
+          <li>Scaled the Backbone Communication Component from <strong>2,000 to 10,000 concurrent connections</strong> and built a reverse channel proxy that let traffic through a single outbound connection with no inbound firewall rules.</li>
+          <li>Led the IPv4-to-IPv6 migration of the Operations Agent network stack with zero disruption; wrote embedded Perl memory caching that let the agent run two years straight in mission-critical environments.</li>
+          <li>Built a custom log hashing algorithm to catch meaningful changes in log files, cutting false-positive alerts by over <strong>60%</strong> in large environments.</li>
+          <li>Built a centralized install repository for Operations Agent for remote, repeatable deployments at scale, cutting manual provisioning effort by <strong>80%</strong>.</li>
+          <li>Resolved <strong>100%</strong> of high-priority on-site escalations at Apple, Samsung, Disney, FedEx, and PG&amp;E through root-cause analysis at the architecture level. Won HP's Global High Impact Award.</li>
         </ul>
       </article>
 
       <article class="role">
         <div class="role-head">
-          <h3>ProcSys</h3>
+          <h3>ProcSys <span class="client">— Client: Cisco</span></h3>
           <time>Sep 1999 – Aug 2004</time>
         </div>
-        <p class="role-meta">Software Engineer · Bangalore, IND</p>
+        <p class="role-meta">Software Engineer · Bangalore, India</p>
         <ul class="role-bullets">
-          <li>Built OpsXML, an intent-driven, declarative framework for automating Cisco router configuration. One of the earliest infrastructure-as-code implementations for physical networking.</li>
-          <li>Built an eLearning platform for Cisco devices used by thousands of students prepping for the CCNA exam.</li>
+          <li>Built OpsXML, an intent-driven, declarative framework for automating Cisco router configuration — one of the earliest infrastructure-as-code implementations for physical networking.</li>
+          <li>Built an eLearning platform for Cisco devices used by thousands of students preparing for the CCNA exam.</li>
         </ul>
       </article>
     </section>
@@ -562,11 +599,11 @@
       <ul class="stat-grid">
         <li>
           <span class="stat-num">99.99%</span>
-          <span class="stat-desc">Uptime sustained as sole SRE owner of a multi-tenant SaaS platform across the Americas, with zero missed SLA commitments over 8 years.</span>
+          <span class="stat-desc">SLA uptime sustained as sole SRE owner of a multi-tenant AIOps SaaS platform across the Americas, for 8 straight years — including Apple's own tenancy.</span>
         </li>
         <li>
           <span class="stat-num">$2.1M</span>
-          <span class="stat-desc">Annual infrastructure cost cut through Kubernetes consolidation and right-sizing, validated against pre-migration cloud billing baselines.</span>
+          <span class="stat-desc">Annual infrastructure cost cut through Kubernetes migration and right-sizing, validated against pre-migration cloud billing baselines.</span>
         </li>
         <li>
           <span class="stat-num">8TB/day</span>
@@ -582,9 +619,9 @@
     <section id="collaboration">
       <h2 class="section-title">Cross-Functional Collaboration</h2>
       <ul class="plain-list">
-        <li>Partnered with product, security, and application teams at Wipro/PNC to define SLO targets and provisioning standards adopted across a 70,000-user platform.</li>
-        <li>Worked directly with R&amp;D and support leadership at Micro Focus/OpenText, feeding customer and field data back into the product roadmap for 30+ production SaaS deployments.</li>
-        <li>Led pre-sales discovery calls and client-facing solution presentations at Kakudi, translating stakeholder requirements into cost and timeline scoping for nonprofit and real-estate clients.</li>
+        <li>Partner across development, security, and operations teams at Wipro/PNC to drive SLO targets, Platform-as-Code standards, and Copilot-based AI tooling adoption across a 70,000-user platform.</li>
+        <li>Ran production readiness reviews directly supporting Apple's own tenancy at Micro Focus/OpenText, and worked with R&amp;D and support leadership to feed customer and field data back into the product roadmap.</li>
+        <li>Led pre-sales discovery calls, proposals, and client-facing solution presentations at Kakudi, scoping cost and timelines for nonprofit and real-estate client engagements.</li>
       </ul>
     </section>
 
@@ -605,8 +642,9 @@
     <section id="publications">
       <h2 class="section-title">Publications &amp; IP</h2>
       <ul class="plain-list">
+        <li>"Agent Security Policy (ASP)" and "Escalation Threshold Theory (SET)" pre-prints, SSRN Author ID 10270516.</li>
+        <li>"The Escalation Trap" series (3 parts), Medium (medium.com/p/c1976c2f6950).</li>
         <li>"Day One AI: From Your First Job to Your First Product" (Amazon Kindle, ISBN 979-8-9957306-0-6).</li>
-        <li>SSRN Author ID 10270516 — papers on AI governance, agent security policy, and fiscal policy for autonomous systems, including "Taxing the AI Agents" (No. 6194458).</li>
         <li>Wipro patent pending: Generation-Bound Cache Invalidation.</li>
       </ul>
     </section>
@@ -614,7 +652,7 @@
     <section id="additional">
       <h2 class="section-title">Additional</h2>
       <ul class="plain-list">
-        <li>Volunteer AI instructor for high school students; STEM event judge; contributor to Better Programming, dev.to, and Hashnode.</li>
+        <li>Volunteer AI instructor for high school students; STEM competition judge (UC Davis C-STEM, Sacramento STEM Faire); contributor to Better Programming, dev.to, and Hashnode.</li>
         <li>Cloud Computing certificate, Stanford Continuing Studies.</li>
         <li>ORCID: 0009-0004-9496-6339.</li>
       </ul>
